@@ -1,0 +1,2 @@
+Hello
+command to run :  npx playwright test tests/Annotations.spec.js --project chromium --headed
