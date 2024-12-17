@@ -7,3 +7,13 @@ npx playwright test testFileName.spec.js --headed :command to run specific test 
 npx playwright test newtest.spec.js --project=webkit --headed : command to run specific test in a specific browser
 -- note: whenever you add "--headed" in the command, this means this test will run on browser means browser windows can be seen
 npx playwright codegen : command to open playwright codegen automation tool
+
+
+
+
+
+
+
+
+
+git push -u origin dev
