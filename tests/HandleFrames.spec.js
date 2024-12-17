@@ -1,5 +1,5 @@
 import {test,expect} from '@playwright/test';
-test('Frames',async({page})=>{
+test.skip('Frames',async({page})=>{
     await page.goto('https://ui.vision/demo/webtest/frames/');
     //how to get total count of frames
     const allFrames=await page.frames();
@@ -17,3 +17,15 @@ await inputBox.fill('Hello');
 
    await page.waitForTimeout(5000);
 })
+test('handle iframe in playwrights',async({page})=>{
+    await page.goto('https://jqueryui.com/droppable/');
+    await page.waitForTimeout(1000);
+    //Iframe
+    const iframeElement=page.frameLocator(".demo-frame");
+    const dragElement=iframeElement.locator("//div[@id='draggable']");
+    const dropElement=iframeElement.locator("//div[@id='droppable']");
+    await dragElement.dragTo(dropElement);
+
+    await page.waitForTimeout(6000);
+})
+

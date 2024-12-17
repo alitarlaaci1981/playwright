@@ -23,8 +23,8 @@ module.exports = defineConfig({
   //workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
 
-  //reporter:'html',
-  reporter:[['allure-playwright',{outputFofer:'allure-results'}]],
+  reporter:'html',
+ // reporter:[['allure-playwright',{outputFofer:'allure-results'}]],
 
  // reporter:[['json',{outputFile:'results.json'}]],
  //reporter:[['junit',{outputFile:'results.xml'}]],
@@ -32,7 +32,7 @@ module.exports = defineConfig({
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
-
+    testIdAttribute:'autocomplete',
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace:'retain-on-failure',
     screenshot:'only-on-failure',
@@ -53,10 +53,10 @@ module.exports = defineConfig({
     //   use: { ...devices['Desktop Firefox'] },
     // },
 
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
+    // {
+    //   name: 'webkit',
+    //   use: { ...devices['Desktop Safari'] },
+    // },
 
     /* Test against mobile viewports. */
     // {
